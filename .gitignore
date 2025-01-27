@@ -1,0 +1,8 @@
+*.o
+*.key
+test*
+rizzsec
+decrypted.denc
+encrypted.enc
+secret_message.txt
+secret.enc
