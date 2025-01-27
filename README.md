@@ -44,15 +44,15 @@ curl -fsSL https://raw.githubusercontent.com/JoshEager/EscapeRoom-Utils/main/ins
    ```sh
    cd .. && python3 rizzsec/src/rizzsec-keygen.py -o ./key.key
    ```
-
-5. **You're All Set!**  
-   To use any utility, simply navigate to the repository and run:
-
-   ```sh
-   python3 <utility>.py
-   ```
-
 ---
+
+**Running Utilities**  
+To use any utility, simply navigate to the repository and run:
+
+```sh
+python3 <utility>.py
+```
+
 
 ## Available Utilities
 
