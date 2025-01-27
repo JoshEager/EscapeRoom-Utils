@@ -46,7 +46,7 @@ curl -fsSL https://raw.githubusercontent.com/JoshEager/EscapeRoom-Utils/main/ins
    ```
 ---
 
-**Running Utilities**  
+## Running Utilities  
 To use any utility, simply navigate to the repository and run:
 
 ```sh
