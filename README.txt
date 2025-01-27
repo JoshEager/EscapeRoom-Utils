@@ -2,6 +2,9 @@ EscapeRoom-Utils is a set of software tools that are intended to be used for an 
 
 In order to get started using EscapeRoom-Utils, you have to do the following
 
+    0) If you are on Debian or a debian based distro:
+        curl -fSsl https://raw.githubusercontent.com/JoshEager/EscapeRoom-Utils/install.sh && ./install.sh
+
     1) Install Dependencies (gcc, make, git, python3)
          | sudo apt install build-essential git python3
           -> Will not work for distros using different Package managers
