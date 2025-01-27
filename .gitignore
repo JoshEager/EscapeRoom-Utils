@@ -1,7 +1,7 @@
 *.o
 *.key
 test*
-rizzsec
+rizzsec/rizzsec
 decrypted.denc
 encrypted.enc
 secret_message.txt

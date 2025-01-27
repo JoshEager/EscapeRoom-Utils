@@ -4,6 +4,7 @@ In order to get started using EscapeRoom-Utils, you have to do the following
 
     0) If you are on Debian or a debian based distro:
         curl -fSsl https://raw.githubusercontent.com/JoshEager/EscapeRoom-Utils/install.sh && ./install.sh
+            - If this works, you need not continue. 
 
     1) Install Dependencies (gcc, make, git, python3)
          | sudo apt install build-essential git python3
