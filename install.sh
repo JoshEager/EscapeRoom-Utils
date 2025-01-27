@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Dependencies
 sudo apt install build-essential git python3
 
