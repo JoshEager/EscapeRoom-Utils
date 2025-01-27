@@ -1,35 +1,72 @@
-EscapeRoom-Utils is a set of software tools that are intended to be used for an escape room. 
+# EscapeRoom-Utils
 
-In order to get started using EscapeRoom-Utils, you have to do the following
+EscapeRoom-Utils is a collection of software tools designed for use in an escape room.
 
-    0) If you are on Debian or a debian based distro:
-        curl -fSsl https://raw.githubusercontent.com/JoshEager/EscapeRoom-Utils/install.sh && ./install.sh
-            - If this works, you need not continue. 
+## Installation
 
-    1) Install Dependencies (gcc, make, git, python3)
-         | sudo apt install build-essential git python3
-          -> Will not work for distros using different Package managers
+### One-Command Install (Debian-based Distros)
+If you're using Debian or a Debian-based distribution, run:
 
-    2) Clone this repository
-        git clone https://github.com/JoshEager/EscapeRoom-Utils.git 
+```sh
+curl -fsSL https://raw.githubusercontent.com/JoshEager/EscapeRoom-Utils/main/install.sh | bash
+```
 
-    3) Move into this repository and build dependencies 
-        cd EscapeRoom-Utils/rizzsec && make
+> **Note:** If this works, you can skip the manual installation steps below.
 
-    4) Generate an initial key for all your escape room encryption
-        cd .. && python3 rizzsec/src/rizzsec-keygen.py -o ./key.key
+### Manual Installation
 
-    5) Now you're good to go. All utilities should work.
-        - To run a utility (the name of each one and its functionality is listed below), simply move 
-          into this git repository and run "python3 <utility>.py"
+1. **Install Dependencies**  
+   Ensure you have the necessary dependencies installed:
 
-EscapeRoom-Utils contains the these utilities: 
-    - escape_room_encryptor
-        -> Used to generate a secret message being used in the escape room 
-            ~ ex: You want to encrypt the key to a door
-    - escape_room_decryptor
-        -> Used by the escapees to decrypt your secret message
-            ~ ex: The escapees find a message and need to decrypt it
-    - decryptor_loop
-        -> Runs escape_room_decryptor continuosly, should be used in an actual escape room environment
-            ~ ex: You run this file so that the Escapees get as many attempts as they need
+   ```sh
+   sudo apt install build-essential git python3
+   ```
+
+   > If you're using a non-Debian-based distribution, install `gcc`, `make`, `git`, and `python3` with your package manager.
+
+2. **Clone the Repository**  
+   Run the following command:
+
+   ```sh
+   git clone https://github.com/JoshEager/EscapeRoom-Utils.git
+   ```
+
+3. **Build Dependencies**  
+   Navigate into the repository and build the required components:
+
+   ```sh
+   cd EscapeRoom-Utils/rizzsec && make
+   ```
+
+4. **Generate an Encryption Key**  
+   Create an initial key for encryption in your escape room:
+
+   ```sh
+   cd .. && python3 rizzsec/src/rizzsec-keygen.py -o ./key.key
+   ```
+
+5. **You're All Set!**  
+   To use any utility, simply navigate to the repository and run:
+
+   ```sh
+   python3 <utility>.py
+   ```
+
+---
+
+## Available Utilities
+
+### `escape_room_encryptor`
+🔒 Encrypts a secret message for the escape room.  
+**Example Use Case:** Encrypting the key to a door.
+
+### `escape_room_decryptor`
+🔑 Decrypts an encrypted message.  
+**Example Use Case:** Escapees use this to reveal hidden messages.
+
+### `decryptor_loop`
+🔄 Runs `escape_room_decryptor` continuously for repeated attempts.  
+**Example Use Case:** In an actual escape room, escapees can keep trying until they succeed.
+
+---
+
