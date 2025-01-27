@@ -10,5 +10,5 @@ make
 
 # Make a key
 cd ..
-python3 ./rizzsec/src/rizzsec-keygen.py
+python3 ./rizzsec/src/rizzsec-keygen.py -o key.key
 
