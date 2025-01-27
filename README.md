@@ -1,59 +1,36 @@
 # EscapeRoom-Utils
 
-EscapeRoom-Utils is a collection of software tools designed for use in an escape room.
+EscapeRoom-Utils is a collection of software tools designed for use in an escape room. 
 
-## Installation
+##  Installation
 
-### One-Command Install (Debian-based Distros)
-If you're using Debian or a Debian-based distribution, run:
+### Install Dependencies
+In order to use EscapeRoom-Utils, you need to have gcc, make, git, and python3. 
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/JoshEager/EscapeRoom-Utils/main/install.sh | bash
+sudo apt install build-essential git python3
 ```
 
-> **Note:** If this works, you can skip the manual installation steps below.
+> **Note:** this command only works for debian based distros
 
-### Manual Installation
+### Clone the repository
+```sh
+git clone https://github.com/JoshEager/EscapeRoom-Utils.git
+```
 
-1. **Install Dependencies**  
-   Ensure you have the necessary dependencies installed:
+### Run the setup script
+This will build the encryptor and generate a key for use in your escape room. 
 
-   ```sh
-   sudo apt install build-essential git python3
-   ```
+```sh
+cd EscapeRoom-Utils && ./setup.sh
+```
 
-   > If you're using a non-Debian-based distribution, install `gcc`, `make`, `git`, and `python3` with your package manager.
-
-2. **Clone the Repository**  
-   Run the following command:
-
-   ```sh
-   git clone https://github.com/JoshEager/EscapeRoom-Utils.git
-   ```
-
-3. **Build Dependencies**  
-   Navigate into the repository and build the required components:
-
-   ```sh
-   cd EscapeRoom-Utils/rizzsec && make
-   ```
-
-4. **Generate an Encryption Key**  
-   Create an initial key for encryption in your escape room:
-
-   ```sh
-   cd .. && python3 rizzsec/src/rizzsec-keygen.py -o ./key.key
-   ```
----
-
-## Running Utilities  
-To use any utility, simply navigate to the repository and run:
-
+## Running Utilities
+To use any utility, simply navigate to the repository you just cloned and run
 ```sh
 python3 <utility>.py
 ```
-where utility is one of the Available Utilities
-
+where utility is one of the Available Utilites
 
 ## Available Utilities
 
@@ -68,6 +45,3 @@ where utility is one of the Available Utilities
 ### `decryptor_loop`
 🔄 Runs `escape_room_decryptor` continuously for repeated attempts.  
 **Example Use Case:** In an actual escape room, escapees can keep trying until they succeed.
-
----
-
