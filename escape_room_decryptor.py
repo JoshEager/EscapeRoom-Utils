@@ -17,6 +17,6 @@ with open("decrypted.denc", "r") as f:
 
 # Print decrypted message, with error handling
 if decrypted_message:
-    print(f"Decrypted: {decrypted_message}")
+    print(f"Decrypted: {decrypted_message}\n")
 else:
     print("Error occureed while reading the message!")
