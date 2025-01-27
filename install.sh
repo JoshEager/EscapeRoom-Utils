@@ -12,5 +12,3 @@ make
 cd ..
 python3 ./rizzsec/src/rizzsec-keygen.py
 
-# Remove the install script
-rm ./install.sh
