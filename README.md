@@ -52,6 +52,7 @@ To use any utility, simply navigate to the repository and run:
 ```sh
 python3 <utility>.py
 ```
+where utility is one of the Available Utilities
 
 
 ## Available Utilities
