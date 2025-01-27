@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build Dependencies
-cd EscapeRoom-Utils/rizzsec
+cd rizzsec
 make
 
 # Make a key
