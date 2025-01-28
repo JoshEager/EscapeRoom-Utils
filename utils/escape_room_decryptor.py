@@ -1,4 +1,4 @@
-from crypt import cryptor
+from rizzsec import cryptor
 
 enc_secret = input("Encrypted: ")
 
