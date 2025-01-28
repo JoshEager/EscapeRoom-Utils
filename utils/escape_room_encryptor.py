@@ -1,26 +1,7 @@
-import subprocess
-from key import KEYPATH
+from crypt import cryptor
 
-ENCRYPTED_FILE_PATH = "../tmp/escape_room_encryptor_enc.txt"
-DECRYPTED_FILE_PATH = "../tmp/escape_room_encryptor_denc.txt"
+secret = input("Secret: ")
 
-# Prompt for the secret message to encrypt
-secret_message = input("Secret Message: ")
+enc_secret = cryptor.encrypt(secret)
 
-# Write the secret message to a file so that it can be used with rizzsec
-with open(DECRYPTED_FILE_PATH, "w") as f:
-    f.write(secret_message)
-
-# Encrypt the secret message and saving it to secret.enc
-subprocess.run(f"../rizzsec/rizzsec encrypt -d {DECRYPTED_FILE_PATH} -i {KEYPATH} -o {ENCRYPTED_FILE_PATH}", shell=True)
-
-# Read secret.enc to enc_secret
-enc_secret = ""
-with open(ENCRYPTED_FILE_PATH, "r") as f:
-    enc_secret = f.read()
-
-# Give the secret message to the user
-if enc_secret:
-    print(f"Encrypted: {enc_secret}")
-else: 
-    print("error")
+print(f"Encrypted: {enc_secret}\n")
