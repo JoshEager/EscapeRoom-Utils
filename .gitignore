@@ -2,9 +2,5 @@
 *.key
 test*
 rizzsec/rizzsec
-decrypted.denc
-encrypted.enc
-secret_message.txt
-secret.enc
 compile_commands.json
 utils/__pycache__
