@@ -7,5 +7,4 @@ encrypted.enc
 secret_message.txt
 secret.enc
 compile_commands.json
-tmp/*
 utils/__pycache__
