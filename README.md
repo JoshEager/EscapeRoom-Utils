@@ -26,7 +26,7 @@ cd EscapeRoom-Utils && ./setup.sh
 ```
 
 ## Running Utilities
-To use any utility, simply navigate to the repository you just cloned and run
+To use any utility, simply go inside the `utils` folder in your cloned version of this repository and type
 ```sh
 python3 <utility>.py
 ```
